@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Common</string>
+    <string name="title">Common</string>
+    <string name="phrase">Phrase</string>
+    <string name="definition">Definition</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+</resources>

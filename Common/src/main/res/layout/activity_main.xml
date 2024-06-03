@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CommonMainActivity">
+
+    <TextView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/score"
+        android:layout_margin="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textColor="@color/black"
+        />
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:id="@+id/app_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/app_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/phrase"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/phrase"
+            android:visibility="visible"
+            android:clickable="true"
+            android:textSize="24sp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            />
+
+            <LinearLayout
+                android:id="@+id/definition_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/definition"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:text="@string/definition"
+                    android:textSize="24sp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_margin="8dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/yes"
+                    android:id="@+id/yes_button"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_margin="8dp"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/white"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/no"
+                    android:id="@+id/no_button"
+                    android:textSize="24sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
